@@ -1,9 +1,21 @@
 
 * {
-  outline: red dashed 1px; 
+  outline: red dashed 1px;
+  margin: 0;
+  padding: 0;
 }
 
+.input-boxes {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 1em;
+  padding-bottom: 0.2em;
+  padding-top: 0.2em;
+}
 
+.boxes {
+  margin: 0.5em;
+}
 .App {
   text-align: center;
 }
@@ -11,6 +23,12 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.teams {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin-top: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {

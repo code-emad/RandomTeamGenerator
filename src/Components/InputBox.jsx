@@ -1,5 +1,12 @@
+import image from '../Images/rohail1.svg';
 import { useState, useEffect } from "react";
 import { Teams } from "./Teams";
+//import jsConfetti from "js-confetti";
+import JSConfetti from 'js-confetti';
+const jsConfetti = new JSConfetti()
+
+//const jsConfetti = new JSConfetti();
+
 
 export const InputBox = () => {
   const [input1, setInput1] = useState("1");
@@ -17,27 +24,65 @@ export const InputBox = () => {
   const [input13, setInput13] = useState("13");
   const [input14, setInput14] = useState("14");
 
-  const handleChange1 = (event) => {setInput1(event.target.value)}
-  const handleChange2 = (event) => {setInput2(event.target.value)}
-  const handleChange3 = (event) => {setInput3(event.target.value)}
-  const handleChange4 = (event) => {setInput4(event.target.value)}
-  const handleChange5 = (event) => {setInput5(event.target.value)}
-  const handleChange6 = (event) => {setInput6(event.target.value)}
-  const handleChange7 = (event) => {setInput7(event.target.value)}
-  const handleChange8 = (event) => {setInput8(event.target.value)}
-  const handleChange9 = (event) => {setInput9(event.target.value)}
-  const handleChange10 = (event) => {setInput10(event.target.value)}
-  const handleChange11 = (event) => {setInput11(event.target.value)}
-  const handleChange12 = (event) => {setInput12(event.target.value)}
-  const handleChange13 = (event) => {setInput13(event.target.value)}
-  const handleChange14 = (event) => {setInput14(event.target.value)}
+  const handleChange1 = (event) => {
+    setInput1(event.target.value);
+  };
+  const handleChange2 = (event) => {
+    setInput2(event.target.value);
+  };
+  const handleChange3 = (event) => {
+    setInput3(event.target.value);
+  };
+  const handleChange4 = (event) => {
+    setInput4(event.target.value);
+  };
+  const handleChange5 = (event) => {
+    setInput5(event.target.value);
+  };
+  const handleChange6 = (event) => {
+    setInput6(event.target.value);
+  };
+  const handleChange7 = (event) => {
+    setInput7(event.target.value);
+  };
+  const handleChange8 = (event) => {
+    setInput8(event.target.value);
+  };
+  const handleChange9 = (event) => {
+    setInput9(event.target.value);
+  };
+  const handleChange10 = (event) => {
+    setInput10(event.target.value);
+  };
+  const handleChange11 = (event) => {
+    setInput11(event.target.value);
+  };
+  const handleChange12 = (event) => {
+    setInput12(event.target.value);
+  };
+  const handleChange13 = (event) => {
+    setInput13(event.target.value);
+  };
+  const handleChange14 = (event) => {
+    setInput14(event.target.value);
+  };
 
   const [players, setPlayers] = useState([]);
   const [team1, setTeam1] = useState([]);
   const [team2, setTeam2] = useState([]);
 
+  const confetti = () => {
+    jsConfetti.addConfetti({
+      emojis: ['🦄'],
+      emojiSize: 100,
+      confettiNumber: 30,
+   })
+  
+  };
+
   const generateTeams = () => {
-     setPlayers([
+    confetti();
+    setPlayers([
       input1,
       input2,
       input3,
@@ -68,24 +113,28 @@ export const InputBox = () => {
     }
   }, [players]);
 
-
+ 
   return (
-    <div>
-      <input type="text" value={input1} onChange={handleChange1}></input>
-      <input type="text" value={input2} onChange={handleChange2}></input>
-      <input type="text" value={input3} onChange={handleChange3}></input>
-      <input type="text" value={input4} onChange={handleChange4}></input>
-      <input type="text" value={input5} onChange={handleChange5}></input>
-      <input type="text" value={input6} onChange={handleChange6}></input>
-      <input type="text" value={input7} onChange={handleChange7}></input>
-      <input type="text" value={input8} onChange={handleChange8}></input>
-      <input type="text" value={input9} onChange={handleChange9}></input>
-      <input type="text" value={input10} onChange={handleChange10}></input>
-      <input type="text" value={input11} onChange={handleChange11}></input>
-      <input type="text" value={input12} onChange={handleChange12}></input>
-      <input type="text" value={input13} onChange={handleChange13}></input>
-      <input type="text" value={input14} onChange={handleChange14}></input>
-      <button type="submit" onClick={generateTeams}>Generate Teams</button>
+    <div class="">
+      <div class="input-boxes">
+      <input class="boxes" type="text" value={input1} onChange={handleChange1}></input>
+      <input class="boxes" type="text" value={input2} onChange={handleChange2}></input>
+      <input class="boxes" type="text" value={input3} onChange={handleChange3}></input>
+      <input class="boxes" type="text" value={input4} onChange={handleChange4}></input>
+      <input class="boxes" type="text" value={input5} onChange={handleChange5}></input>
+      <input class="boxes" type="text" value={input6} onChange={handleChange6}></input>
+      <input class="boxes" type="text" value={input7} onChange={handleChange7}></input>
+      <input class="boxes" type="text" value={input8} onChange={handleChange8}></input>
+      <input class="boxes" type="text" value={input9} onChange={handleChange9}></input>
+      <input class="boxes" type="text" value={input10} onChange={handleChange10}></input>
+      <input class="boxes" type="text" value={input11} onChange={handleChange11}></input>
+      <input class="boxes" type="text" value={input12} onChange={handleChange12}></input>
+      <input class="boxes" type="text" value={input13} onChange={handleChange13}></input>
+      <input class="boxes" type="text" value={input14} onChange={handleChange14}></input>
+      </div>
+      <button type="submit" onClick={generateTeams} class="button">
+        Generate Teams
+      </button>
       <Teams team1={team1} team2={team2}></Teams>
     </div>
   );
