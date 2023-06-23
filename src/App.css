@@ -1,3 +1,9 @@
+
+* {
+  outline: red dashed 1px; 
+}
+
+
 .App {
   text-align: center;
 }
