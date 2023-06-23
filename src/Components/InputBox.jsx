@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Teams } from "./Teams";
 
 export const InputBox = () => {
   const [input1, setInput1] = useState("1");
@@ -31,8 +32,12 @@ export const InputBox = () => {
   const handleChange13 = (event) => {setInput13(event.target.value)}
   const handleChange14 = (event) => {setInput14(event.target.value)}
 
+  const [players, setPlayers] = useState([]);
+  const [team1, setTeam1] = useState([]);
+  const [team2, setTeam2] = useState([]);
+
   const generateTeams = () => {
-    const players = [
+     setPlayers([
       input1,
       input2,
       input3,
@@ -47,18 +52,21 @@ export const InputBox = () => {
       input12,
       input13,
       input14,
-    ];
-
-    // Shuffle the players randomly
-    const shuffledPlayers = players.sort(() => Math.random() - 0.5);
-
-    // Divide the players into two teams
-    const team1 = shuffledPlayers.slice(0, 7);
-    const team2 = shuffledPlayers.slice(7, 14);
-
-    console.log("Team 1:", team1);
-    console.log("Team 2:", team2);
+    ]);
   };
+
+  useEffect(() => {
+    // This effect will run whenever players state is updated
+    if (players.length > 0) {
+      // Shuffle the players randomly
+      let shuffledPlayers = [...players].sort(() => Math.random() - 0.5);
+      // Divide the players into two teams
+      let newTeam1 = shuffledPlayers.slice(0, 7);
+      let newTeam2 = shuffledPlayers.slice(7, 14);
+      setTeam1(newTeam1);
+      setTeam2(newTeam2);
+    }
+  }, [players]);
 
 
   return (
@@ -78,6 +86,7 @@ export const InputBox = () => {
       <input type="text" value={input13} onChange={handleChange13}></input>
       <input type="text" value={input14} onChange={handleChange14}></input>
       <button type="submit" onClick={generateTeams}>Generate Teams</button>
+      <Teams team1={team1} team2={team2}></Teams>
     </div>
   );
 };
