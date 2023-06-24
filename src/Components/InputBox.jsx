@@ -1,12 +1,6 @@
-import image from '../Images/rohail1.svg';
+import testImage from '../Images/test.webp';
 import { useState, useEffect } from "react";
 import { Teams } from "./Teams";
-//import jsConfetti from "js-confetti";
-import JSConfetti from 'js-confetti';
-const jsConfetti = new JSConfetti()
-
-//const jsConfetti = new JSConfetti();
-
 
 export const InputBox = () => {
   const [input1, setInput1] = useState("1");
@@ -71,17 +65,7 @@ export const InputBox = () => {
   const [team1, setTeam1] = useState([]);
   const [team2, setTeam2] = useState([]);
 
-  const confetti = () => {
-    jsConfetti.addConfetti({
-      emojis: ['🦄'],
-      emojiSize: 100,
-      confettiNumber: 30,
-   })
-  
-  };
-
   const generateTeams = () => {
-    confetti();
     setPlayers([
       input1,
       input2,
@@ -115,24 +99,24 @@ export const InputBox = () => {
 
  
   return (
-    <div class="">
-      <div class="input-boxes">
-      <input class="boxes" type="text" value={input1} onChange={handleChange1}></input>
-      <input class="boxes" type="text" value={input2} onChange={handleChange2}></input>
-      <input class="boxes" type="text" value={input3} onChange={handleChange3}></input>
-      <input class="boxes" type="text" value={input4} onChange={handleChange4}></input>
-      <input class="boxes" type="text" value={input5} onChange={handleChange5}></input>
-      <input class="boxes" type="text" value={input6} onChange={handleChange6}></input>
-      <input class="boxes" type="text" value={input7} onChange={handleChange7}></input>
-      <input class="boxes" type="text" value={input8} onChange={handleChange8}></input>
-      <input class="boxes" type="text" value={input9} onChange={handleChange9}></input>
-      <input class="boxes" type="text" value={input10} onChange={handleChange10}></input>
-      <input class="boxes" type="text" value={input11} onChange={handleChange11}></input>
-      <input class="boxes" type="text" value={input12} onChange={handleChange12}></input>
-      <input class="boxes" type="text" value={input13} onChange={handleChange13}></input>
-      <input class="boxes" type="text" value={input14} onChange={handleChange14}></input>
+    <div >
+      <div className="input-boxes">
+      <input className="boxes" type="text" value={input1} onChange={handleChange1}></input>
+      <input className="boxes" type="text" value={input2} onChange={handleChange2}></input>
+      <input className="boxes" type="text" value={input3} onChange={handleChange3}></input>
+      <input className="boxes" type="text" value={input4} onChange={handleChange4}></input>
+      <input className="boxes" type="text" value={input5} onChange={handleChange5}></input>
+      <input className="boxes" type="text" value={input6} onChange={handleChange6}></input>
+      <input className="boxes" type="text" value={input7} onChange={handleChange7}></input>
+      <input className="boxes" type="text" value={input8} onChange={handleChange8}></input>
+      <input className="boxes" type="text" value={input9} onChange={handleChange9}></input>
+      <input className="boxes" type="text" value={input10} onChange={handleChange10}></input>
+      <input className="boxes" type="text" value={input11} onChange={handleChange11}></input>
+      <input className="boxes" type="text" value={input12} onChange={handleChange12}></input>
+      <input className="boxes" type="text" value={input13} onChange={handleChange13}></input>
+      <input className="boxes" type="text" value={input14} onChange={handleChange14}></input>
       </div>
-      <button type="submit" onClick={generateTeams} class="button">
+      <button type="submit" onClick={generateTeams} >
         Generate Teams
       </button>
       <Teams team1={team1} team2={team2}></Teams>
