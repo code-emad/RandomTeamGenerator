@@ -1,9 +1,24 @@
 
 * {
-  outline: red dashed 1px;
+  /* outline: red dashed 1px; */
   margin: 0;
   padding: 0;
+  font-family: Rocher;
 }
+
+body {
+  background-image: url("https://img.freepik.com/free-vector/illustration-scene-with-football-field-stadium_1308-37038.jpg?w=826&t=st=1688152556~exp=1688153156~hmac=80685bb9405d9f757166d0314131fc06389aa396063e5f5b8a0d398d41869f30g"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  font-family: 'Rocher';
+  text-align: center;
+  font-size: 2em;
+  font-palette: --Purple;
+}
+
 
 .input-boxes {
   display: grid;
@@ -15,6 +30,15 @@
 
 .boxes {
   margin: 0.5em;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgba(113, 171, 117, 0.7);
+  text-align: center;
+  font-family: Rocher;
+  font-palette: --Orange;
+  
+
 }
 
 .App {
@@ -32,15 +56,65 @@
   src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
 }
 
+
+
+@font-palette-values --Input {
+  font-family: Rocher;
+  base-palette: 3;
+}
+
+@font-palette-values --Pink {
+  font-family: Rocher;
+  base-palette: 1;
+}
+
+@font-palette-values --Green {
+  font-family: Rocher;
+  base-palette: 2;
+}
+
+@font-palette-values --White {
+  font-family: Rocher;
+  base-palette: 3;
+}
+
+@font-palette-values --Blue {
+  font-family: Rocher;
+  base-palette: 4;
+}
+
+@font-palette-values --Yellow {
+  font-family: Rocher;
+  base-palette: 5;
+}
+
 @font-palette-values --Purple {
   font-family: Rocher;
   base-palette: 6;
 }
 
-.title {
-  font-family: 'Rocher';
-  text-align: center;
-  font-size: 2em;
-  font-palette: --Purple;
+@font-palette-values --Cyan {
+  font-family: Rocher;
+  base-palette: 7;
+}
+
+@font-palette-values --Orange {
+  font-family: Rocher;
+  base-palette: 8;
+}
+
+@font-palette-values --Grey {
+  font-family: Rocher;
+  base-palette: 9;
+}
+
+@font-palette-values --Cyan2 {
+  font-family: Rocher;
+  base-palette: 10;
+}
+
+@font-palette-values --Default {
+  font-family: Rocher;
+  base-palette: 11;
 }
 
