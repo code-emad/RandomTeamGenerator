@@ -4,7 +4,7 @@ import { InputBox } from './Components/InputBox';
 function App() {
   return (
     <div className="App">
-      <h1>Random Team Generator</h1>
+      <h1 className='title'>Random Team Generator</h1>
       <InputBox></InputBox>
     </div>
   );
