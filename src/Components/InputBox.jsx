@@ -5,20 +5,20 @@ import JSConfetti from "js-confetti";
 const jsConfetti = new JSConfetti();
 
 export const InputBox = () => {
-  const [input1, setInput1] = useState("1");
-  const [input2, setInput2] = useState("2");
-  const [input3, setInput3] = useState("3");
-  const [input4, setInput4] = useState("4");
-  const [input5, setInput5] = useState("5");
-  const [input6, setInput6] = useState("6");
-  const [input7, setInput7] = useState("7");
-  const [input8, setInput8] = useState("8");
-  const [input9, setInput9] = useState("9");
-  const [input10, setInput10] = useState("10");
-  const [input11, setInput11] = useState("11");
-  const [input12, setInput12] = useState("12");
-  const [input13, setInput13] = useState("13");
-  const [input14, setInput14] = useState("14");
+  const [input1, setInput1] = useState("1. ");
+  const [input2, setInput2] = useState("2. ");
+  const [input3, setInput3] = useState("3. ");
+  const [input4, setInput4] = useState("4. ");
+  const [input5, setInput5] = useState("5. ");
+  const [input6, setInput6] = useState("6. ");
+  const [input7, setInput7] = useState("7. ");
+  const [input8, setInput8] = useState("8. ");
+  const [input9, setInput9] = useState("9. ");
+  const [input10, setInput10] = useState("10. ");
+  const [input11, setInput11] = useState("11. ");
+  const [input12, setInput12] = useState("12. ");
+  const [input13, setInput13] = useState("13. ");
+  const [input14, setInput14] = useState("14. ");
 
   const [players, setPlayers] = useState([]);
   const [team1, setTeam1] = useState([]);

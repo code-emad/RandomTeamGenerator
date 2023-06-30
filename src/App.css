@@ -16,7 +16,7 @@ body {
   font-family: 'Rocher';
   text-align: center;
   font-size: 2em;
-  font-palette: --Purple;
+  font-palette: --Green;
 }
 
 
@@ -33,12 +33,27 @@ body {
   border-radius: 5px;
   border: 1px solid black;
   box-shadow: 1px 2px 3px 4px rgba(0, 0, 0, 0.1);
-  background-color: rgba(113, 171, 117, 0.7);
+  background-color: rgba(126, 252, 189, 0.7);
   text-align: center;
   font-family: Rocher;
   font-palette: --Orange;
-  
+}
 
+button {
+  padding: 0.2em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border: 2px solid white;
+  border-radius: 5px;
+  background-color: #F7A66F;
+  cursor: pointer;
+  transition: background-color 0.3s ease-out;
+  font-family: Rocher;
+  font-palette: --Yellow;
+}
+
+button:hover {
+  background-color: #AB7855;
 }
 
 .App {
@@ -51,16 +66,31 @@ body {
   margin-top: 0;
 }
 
+.team1 {
+  border: 1px solid black;
+  margin-top: 1rem;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 20px;
+  background-color: rgba(250, 235, 215, 0.75);
+  font-family: Rocher;
+  font-palette: --Purple;
+}
+
+.team2 {
+  border: 1px solid black;
+  margin-top: 1rem;
+  margin-left: 1em;
+  margin-right: 1em;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.75);
+  font-family: Rocher;
+  font-palette: --Grey;
+}
+
 @font-face {
   font-family: 'Rocher';
   src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
-}
-
-
-
-@font-palette-values --Input {
-  font-family: Rocher;
-  base-palette: 3;
 }
 
 @font-palette-values --Pink {
