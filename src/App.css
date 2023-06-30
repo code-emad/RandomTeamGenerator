@@ -42,6 +42,7 @@ button {
   padding: 0.2em;
   padding-left: 1rem;
   padding-right: 1rem;
+  margin-bottom: 0.5rem;
   border: 2px solid white;
   border-radius: 5px;
   background-color: #F7A66F;
@@ -70,6 +71,7 @@ button:hover {
   margin-top: 1rem;
   margin-left: 1em;
   margin-right: 1em;
+  margin-bottom: 0.5rem;
   border-radius: 20px;
   background-color: rgba(250, 235, 215, 0.75);
   font-family: Rocher;
@@ -81,6 +83,7 @@ button:hover {
   margin-top: 1rem;
   margin-left: 1em;
   margin-right: 1em;
+  margin-bottom: 0.5rem;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0.75);
   font-family: Rocher;
